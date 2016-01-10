@@ -1,0 +1,16 @@
+<template name="newUser">
+    <h2>Register</h2>
+    <form class="newUser">
+    	<p>Username: <input type="text" name="username" value="alain"></p>
+        <p>Email: <input type="email" name="email" value="alain.goldman@gmail.com"></p>
+        <p>Password: <input type="password" name="password" value="red123"></p>
+        <p><input type="submit" value="Register"></p>
+    </form>
+
+    {{#each user}}
+    	<p>
+    		User: <b>{{username}}</b>
+    	 	{{email}}
+    	</p>
+    {{/each}}
+</template>

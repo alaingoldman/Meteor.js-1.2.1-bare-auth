@@ -1,0 +1,15 @@
+<template name="index">
+	  <h1>Welcome to Meteor!</h1>
+	  <a href="{{pathFor route='home'}}">home</a>
+	  <a href="{{pathFor route='login'}}">login</a>
+	  <a href="{{pathFor route='newUser'}}">register</a>
+	  <a href="#" id="destroy-all" class="text-danger">Delete all users?</a>
+
+	  {{#if currentUser}}
+	    <span>{{currentUser.username}}</span>
+	    <a class="text-danger" id="logout" href=""> Logout </a>
+	  {{/if}}
+
+	  {{> flashMessages}}
+	  {{> yield}}
+</template>
